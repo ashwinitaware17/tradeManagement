@@ -39,7 +39,7 @@ public class TradeController {
 	@PostMapping("/create") // This is to map Rest API path with specific method
 	public String createTrade(@Valid @RequestBody TradeDto inputTradeDto) {
 		// @RequestBody is to convert input json body to java class
-		logger.info("(createTrade) Received required inputTradeDto {}", inputTradeDto);
+		logger.info("(createTrade) Received request inputTradeDto {}", inputTradeDto);
 		tradeService.storeTrade(inputTradeDto);
 
 		return "trade created";
